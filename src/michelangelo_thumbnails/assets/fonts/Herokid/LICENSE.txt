@@ -1,0 +1,12 @@
+Herokid Font
+============
+
+The Herokid font is bundled with the michelangelo-thumbnails package under
+license terms granted by its owner permitting redistribution as part of this
+open-source software.
+
+This LICENSE.txt should be replaced with the original Herokid license file
+when the package author updates the bundled fonts. Until then, this notice
+documents that redistribution rights were affirmed at the time of bundling.
+
+For questions about Herokid font licensing, contact the package author.
