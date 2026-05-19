@@ -11,7 +11,8 @@ Claude Code skill.
 A real-world Michelangelo thumbnail: bold headline with a highlighted phrase,
 an accent-colored circular badge top-right, an action-shot photo cutout
 top-left, and a logo footer — all of these primitives are exposed as
-parameters in the CLI. Render-test variants in [Gallery](#gallery).
+parameters in the CLI. See [@reconmtb on Instagram](https://www.instagram.com/reconmtb/)
+for an example user shipping Michelangelo thumbnails in the wild.
 
 ## Install
 
@@ -62,17 +63,6 @@ Copy [`commands/michelangelo.md`](commands/michelangelo.md) to
 - Default: **rembg** (free, local). First run downloads ~170MB.
 - Opt-in upgrade: set `PIXIAN_API_KEY=api_id:api_secret` to use Pixian instead.
 - Disable entirely with `--segmenter none`.
-
-## Gallery
-
-| Layout | Output |
-| --- | --- |
-| Two text badges + title (`two-text-badges`) | <img src="docs/demo.png" width="240"> |
-| Image badge with dominant-color title (`dominant-color`) | <img src="docs/example-dominant.png" width="240"> |
-| Blob-shape badge (`blob-shape`) | <img src="docs/example-blob.png" width="240"> |
-
-All three are produced by the test suite — run `pytest tests/test_generate.py`
-and the rendered goldens land in `tests/golden/`.
 
 ## Development
 
