@@ -8,9 +8,10 @@ Claude Code skill.
   <img src="docs/demo.png" alt="Example Michelangelo thumbnail" width="360">
 </p>
 
-The image above was produced by the `two-text-badges` golden test in this
-repo: a bold "SALE" title, a "NEW" image-badge top-right, a "HOT" text-badge
-bottom-left, all composed over a simple scene. Render variants in [Gallery](#gallery).
+A real-world Michelangelo thumbnail: bold headline with a highlighted phrase,
+an accent-colored circular badge top-right, an action-shot photo cutout
+top-left, and a logo footer — all of these primitives are exposed as
+parameters in the CLI. Render-test variants in [Gallery](#gallery).
 
 ## Install
 
