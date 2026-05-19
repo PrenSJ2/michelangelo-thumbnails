@@ -4,6 +4,14 @@ Generate Michelangelo-style thumbnails — bold title text, accent-colored
 circular badges, optional product cutout. Open-source CLI + Python library +
 Claude Code skill.
 
+<p align="center">
+  <img src="docs/demo.png" alt="Example Michelangelo thumbnail" width="360">
+</p>
+
+The image above was produced by the `two-text-badges` golden test in this
+repo: a bold "SALE" title, a "NEW" image-badge top-right, a "HOT" text-badge
+bottom-left, all composed over a simple scene. Render variants in [Gallery](#gallery).
+
 ## Install
 
 ```bash
@@ -53,6 +61,17 @@ Copy [`commands/michelangelo.md`](commands/michelangelo.md) to
 - Default: **rembg** (free, local). First run downloads ~170MB.
 - Opt-in upgrade: set `PIXIAN_API_KEY=api_id:api_secret` to use Pixian instead.
 - Disable entirely with `--segmenter none`.
+
+## Gallery
+
+| Layout | Output |
+| --- | --- |
+| Two text badges + title (`two-text-badges`) | <img src="docs/demo.png" width="240"> |
+| Image badge with dominant-color title (`dominant-color`) | <img src="docs/example-dominant.png" width="240"> |
+| Blob-shape badge (`blob-shape`) | <img src="docs/example-blob.png" width="240"> |
+
+All three are produced by the test suite — run `pytest tests/test_generate.py`
+and the rendered goldens land in `tests/golden/`.
 
 ## Development
 
