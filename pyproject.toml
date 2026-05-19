@@ -41,8 +41,8 @@ dev = [
 michelangelo = "michelangelo_thumbnails.cli:main"
 
 [project.urls]
-Homepage = "https://github.com/sebprentice/michelangelo-thumbnails"
-Issues = "https://github.com/sebprentice/michelangelo-thumbnails/issues"
+Homepage = "https://github.com/PrenSJ2/michelangelo-thumbnails"
+Issues = "https://github.com/PrenSJ2/michelangelo-thumbnails/issues"
 
 [tool.setuptools.packages.find]
 where = ["src"]
