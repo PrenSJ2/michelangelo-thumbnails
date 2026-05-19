@@ -56,7 +56,8 @@ def draw_title(
     color: tuple[int, int, int],
     align: str = 'center',
     max_width: int | None = None,
-    y_offset_frac: float = 0.78,
+    bottom_margin: int | None = None,  # default 8% of canvas height
+    bottom_reserve: int = 0,  # additional pixels reserved at bottom (e.g. footer bar)
 ) -> Image.Image:
     """Draw a wrapped title onto a copy of `base`."""
     canvas = base.copy()
@@ -67,7 +68,11 @@ def draw_title(
 
     line_height = int(font_size * 1.15)
     total_h = line_height * len(lines)
-    y = int(canvas.height * y_offset_frac) - total_h // 2
+
+    if bottom_margin is None:
+        bottom_margin = int(canvas.height * 0.08)
+    bottom_edge = canvas.height - bottom_margin - bottom_reserve
+    y = bottom_edge - total_h
 
     for line in lines:
         bbox = draw.textbbox((0, 0), line, font=font)

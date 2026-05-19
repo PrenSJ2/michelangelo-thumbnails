@@ -61,6 +61,15 @@ def generate(cfg: Config, output_path: str | None = None) -> bytes:
     # 9. Title
     title_color = _title_color(cfg, placed_circle_image=_first_circle_resolved(cfg))
     base_size = cfg.title_font_size or _default_title_size(cfg)
+    bottom_reserve = (
+        320
+        if (
+            cfg.show_additional_text
+            and cfg.additional_text_content
+            and cfg.additional_text_position == 'bottom'
+        )
+        else 0
+    )
     canvas = text.draw_title(
         canvas.convert('RGB'),
         title=cfg.title,
@@ -68,6 +77,7 @@ def generate(cfg: Config, output_path: str | None = None) -> bytes:
         font_size=base_size,
         color=title_color,
         align=cfg.title_text_align,
+        bottom_reserve=bottom_reserve,
     )
 
     # 10. Additional text
