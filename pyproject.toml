@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "michelangelo-thumbnails"
+version = "0.1.0"
+description = "Generate Michelangelo-style thumbnails — bold title text, accent circles, optional product cutout"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [{ name = "Sebastian Prentice" }]
+keywords = ["thumbnail", "image", "marketing", "claude", "skill", "ai-agent"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Multimedia :: Graphics",
+]
+dependencies = [
+    "Pillow>=10.0",
+    "numpy>=1.26",
+    "requests>=2.31",
+]
+
+[project.optional-dependencies]
+smart = ["rembg[cpu]>=2.0.50"]
+dev = [
+    "pytest>=8.0",
+    "pytest-cov>=5.0",
+    "ruff>=0.6",
+    "responses>=0.25",
+    "scikit-image>=0.24",
+    "pre-commit>=3.7",
+]
+
+[project.scripts]
+michelangelo = "michelangelo_thumbnails.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/sebprentice/michelangelo-thumbnails"
+Issues = "https://github.com/sebprentice/michelangelo-thumbnails/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+michelangelo_thumbnails = ["assets/fonts/**/*"]
