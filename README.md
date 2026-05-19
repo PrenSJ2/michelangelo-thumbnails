@@ -57,7 +57,7 @@ Copy [`commands/michelangelo.md`](commands/michelangelo.md) to
 ## Development
 
 ```bash
-git clone https://github.com/sebprentice/michelangelo-thumbnails
+git clone https://github.com/PrenSJ2/michelangelo-thumbnails
 cd michelangelo-thumbnails
 python -m venv .venv && source .venv/bin/activate
 pip install -e ".[dev,smart]"
