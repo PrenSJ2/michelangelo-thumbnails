@@ -12,3 +12,6 @@ htmlcov/
 tests/fixtures/.cache/
 .cache/
 .DS_Store
+.idea/
+.vscode/
+*.so
